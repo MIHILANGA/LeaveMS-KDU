@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 
-function Signup(){
+function Home(){
 
     return(
         <div>
@@ -15,4 +16,4 @@ function Signup(){
     );
 }
 
-export default Signup;
+export default Home;
