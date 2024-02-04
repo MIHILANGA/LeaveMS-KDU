@@ -1,19 +1,23 @@
-/* eslint-disable no-unused-vars */
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import './CSS/Signup.css'; // Import your CSS file
 
-function Home(){
+function Signup() {
+    
 
-    return(
-        <div>
-            <div>
-                <h2>Home Page</h2>
-                
+    return (
+        <div className="signup-container">
+            <div className="header-rectangle">
+            <img className="logo" alt="Kotelawala defence" src="kdu.png" />
+                <h1>Leave Management System</h1>
             </div>
-        </div>
+               
+                </div>
+            
     );
 }
 
-export default Home;
+export default Signup;
