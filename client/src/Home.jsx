@@ -4,7 +4,7 @@ import './CSS/Home.css'; // Import your CSS file
 
 function Signup() {
     return (
-        <div className="signup-container">
+        <div className="home-container">
             <div className="header-rectangle">
                 <img className="logo" alt="Kotelawala defence" src="kdu.png" />
                 <h1>Leave Management System</h1>
@@ -14,10 +14,10 @@ function Signup() {
                     Requests
                 </Link>
                 <Link to="/VehicleDetails" className="vehiclesbtn">
-                    Vehicles
+                    Conformations
                 </Link>
                 <Link to="/Assign" className="assignbtn">
-                    Assign
+                    Rejections
                 </Link>
                 <Link to="/DriversDetails" className="driverbtn">
                     Drivers

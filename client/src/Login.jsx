@@ -23,14 +23,14 @@ function Login() {
     }
 
     return (
-        <div className="signup-container">
+        <div className="login-container">
             <div className="header-rectangle">
             <img className="logo" alt="Kotelawala defence" src="kdu.png" />
                 <h1>Leave Management System</h1>
             </div>
             
                 <div className="d-flex justify-content-center align-items-center vh-100">
-                    <div className="bg-white p-3 rounded-5 w-25">
+                    <div className="frame1">
                         <h2>Login</h2>
                         <form onSubmit={handleSubmit}>
                     <div className="mb-3">

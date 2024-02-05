@@ -28,7 +28,7 @@ function Signup() {
                 <h1>Leave Management System</h1>
             </div>
                 <div className="d-flex justify-content-center align-items-center vh-100">
-                    <div className="bg-white p-3 rounded-5 w-25">
+                    <div className="frame">
                         <h2>Register</h2>
                         <form onSubmit={handleSubmit}>
                             <div className="mb-3">
