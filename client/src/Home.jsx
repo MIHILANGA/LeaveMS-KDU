@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './CSS/Home.css'; // Import your CSS file
 
-function Signup() {
+function Home() {
     return (
         <div className="home-container">
             <div className="header-rectangle">
@@ -41,4 +41,4 @@ function Signup() {
     );
 }
 
-export default Signup;
+export default Home;
