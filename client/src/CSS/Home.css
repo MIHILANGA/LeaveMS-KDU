@@ -104,6 +104,7 @@ body {
     margin-top: -30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     background-color: #ffffffd8;
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .panel2 {
@@ -117,7 +118,41 @@ body {
     margin-top: -460px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     background-color: #ffffffd8;
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 h2{
     padding-top: 10px;
+}
+
+/* Home.css */
+
+/* Style for table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style for table headers */
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style for table cells */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Style for odd rows */
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Style for table headers in the second panel */
+.panel2 th {
+    background-color: #e6f7ff; /* Light blue */
 }

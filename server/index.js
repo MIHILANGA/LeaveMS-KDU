@@ -32,6 +32,14 @@ app.post('/register',(req,res)=>{
     .catch(err => res.json(err))
 })
 
+app.get('/notification', (req, res) => {
+    EmployeeModel.find()
+        .then(employees => res.json(employees))
+        .catch(err => res.json(err));
+});
+
+
+
 app.listen(3001, ()=>{
     console.log("server is running")
 })
