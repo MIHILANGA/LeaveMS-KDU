@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
@@ -16,7 +15,11 @@ function Login() {
             .then(result => {
                 console.log(result);
                 if (result.data === "Success") {
-                    navigate('/home');
+                    if (email === "admin") {
+                        navigate('/home', { state: { email, username: 'admin' } }); // Pass email and username
+                    } else {
+                        navigate('/home2', { state: { email, username: 'user' } }); // Pass email and username
+                    }
                 }
             })
             .catch(err => console.log(err));

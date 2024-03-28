@@ -32,7 +32,7 @@ function Home() {
                 <img className="logo" alt="Kotelawala defence" src="kdu.png" />
                 <h1>Leave Management System</h1>
             </div>
-            <div className="nav-buttons">
+            <div className="nav-buttons1">
                 <Link to="/FormD" className="requestsbtn">
                     All Requests
                 </Link>

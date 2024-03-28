@@ -46,21 +46,17 @@ body {
 }
 
 /* Add more styling as needed for your form elements */
-.nav-buttons1 {
+.nav-buttons {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-top: -50px;
-    margin-left: 120px;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 0px;
+    margin-left: 20px;
     padding: 10px;
-    gap: 10px;
   }
   
   .requestsbtn,
-  .vehiclesbtn,
-  .driverbtn,
-  .assignbtn,
-  .reservationbtn {
+  .vehiclesbtn {
     position: relative; /* Add this line to set the parent element to relative positioning */
     text-decoration: none;
     text-align: center;
@@ -93,33 +89,21 @@ body {
   }
 
   
-.panel {
+.panel1 {
     text-align: left;
     font-family: Arial, sans-serif;
     border-radius: 15px;
-    height: 460px;
-    width: 720px;
+    height: 500px;
+    width: 1150px;
     margin-right: 1px;
-    margin-left: 30px;
-    margin-top: -30px;
+    margin-left: 300px;
+    margin-top: -320px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     background-color: #ffffffd8;
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
-.panel2 {
-    text-align: left;
-    font-family: Arial, sans-serif;
-    border-radius: 15px;
-    height: 460px;
-    width: 720px;
-    margin-right: 1px;
-    margin-left: 790px;
-    margin-top: -460px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    background-color: #ffffffd8;
-    overflow-y: auto; /* Enable vertical scrolling */
-}
+
 h2{
     padding-top: 10px;
 }
@@ -156,3 +140,58 @@ tr:nth-child(odd) {
 .panel2 th {
     background-color: #e6f7ff; /* Light blue */
 }
+
+.form1{
+    height: 400px;
+}
+
+.panel1 {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .panel1 h2 {
+    margin-bottom: 20px;
+  }
+  
+  .panel1 form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .panel1 label {
+    font-weight: bold;
+  }
+  
+  .panel1 input[type="text"],
+  .panel1 textarea,
+  .panel1 input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .panel1 textarea {
+    height: 100px;
+  }
+  
+  .submit-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  
