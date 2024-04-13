@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios'; // Import Axios
-import './CSS/RConformation.css'; // Import your CSS file
+import axios from 'axios';
+import QRCode from 'qrcode.react';
+import './CSS/RConformation.css';
 
 function RConformation() {
     const [requests, setRequests] = useState([]);
 
     useEffect(() => {
-        // Fetch requests data when the component mounts
-        axios.get('http://localhost:3001/requestss')
+        axios.get('http://localhost:3001/request')
             .then(response => {
-                // If request is successful, set the data in state
                 setRequests(response.data);
             })
             .catch(error => {
-                // Handle errors
                 console.error('Error fetching data:', error);
             });
     }, []);
@@ -36,7 +34,8 @@ function RConformation() {
                             <th>Date In</th>
                             <th>Time In</th>
                             <th>Reason</th>
-                            <th>Conformation or Reject</th>
+                            <th>Confirmation or Reject</th>
+                            <th>sdfadf</th>
                             <th>QR Code</th>
                         </tr>
                     </thead>
@@ -49,8 +48,19 @@ function RConformation() {
                                 <td>{request.date_in}</td>
                                 <td>{request.time_in}</td>
                                 <td>{request.reason}</td>
-                                <td>{request.conformation}</td>
-                                <td>{request.qr}</td>
+                                <td>{request.confirmation}</td>
+                                <td></td>
+                                <td>
+                                    {/* Generate QR code with specific data */}
+                                    {request.confirmation === 'Confirmed' && (
+                                        <QRCode value={JSON.stringify({
+                                            name: request.name,
+                                            intake: request.intake,
+                                            department: request.department,
+                                            message: 'Your request has been confirmed.'
+                                        })} />
+                                    )}
+                                </td>
                             </tr>
                         ))}
                     </tbody>

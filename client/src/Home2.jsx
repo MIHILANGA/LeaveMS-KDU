@@ -13,7 +13,8 @@ function Home() {
         time_in: '',
         date_out: '',
         time_out: '',
-        reason: ''
+        reason: '',
+        confirmation: '',
     });
 
     const handleChange = (e) => {
@@ -41,7 +42,8 @@ function Home() {
                     time_in: '',
                     date_out: '',
                     time_out: '',
-                    reason: ''
+                    reason: '',
+                    confirmation: ''
                 });
             } else {
                 toast.error('Failed to submit request');
