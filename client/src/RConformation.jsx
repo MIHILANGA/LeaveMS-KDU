@@ -10,7 +10,14 @@ function RConformation() {
     useEffect(() => {
         axios.get('http://localhost:3001/request')
             .then(response => {
-                setRequests(response.data);
+                // Convert date strings to local dates
+                const updatedRequests = response.data.map(request => ({
+                    ...request,
+                    date_out: new Date(request.date_out).toLocaleDateString(),
+                    date_in: new Date(request.date_in).toLocaleDateString()
+                }));
+                // Reverse the array before setting state
+                setRequests(updatedRequests.reverse());
             })
             .catch(error => {
                 console.error('Error fetching data:', error);

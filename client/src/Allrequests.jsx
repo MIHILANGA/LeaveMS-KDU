@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import QRCode from 'qrcode.react';
-import './CSS/Home.css';
+import './CSS/Allrequest.css';
 
 function Home() {
     const [requests, setRequests] = useState([]);
@@ -14,8 +14,7 @@ function Home() {
         fetch('http://localhost:3001/request')
             .then(response => response.json())
             .then(data => {
-                const filteredRequests = data.filter(request => request.confirmation === "");
-                setRequests(filteredRequests);
+                setRequests(data); // Set all requests without filtering
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
@@ -81,25 +80,9 @@ function Home() {
                 <img className="logo" alt="Kotelawala defence" src="kdu.png" />
                 <h1>Leave Management System</h1>
             </div>
-            <div className="nav-buttons1">
-                <Link to="/Allrequests" className="requestsbtn">
-                    All Requests
-                </Link>
-                <Link to="/VehicleDetails" className="vehiclesbtn">
-                    Students In & Out Details
-                </Link>
-                <Link to="/Assign" className="assignbtn">
-                    Student Details
-                </Link>
-                <Link to="/DriversDetails" className="driverbtn">
-                    Cadets & Officers Details
-                </Link>
-                <Link to="/S0pecialRequest" className="reservationbtn">
-                    Documents
-                </Link>
-            </div>
-            <div className="panel">
-                <h2>New Requests</h2>
+            
+            <div className="panel2">
+                <h2>All Requests</h2>
                 <table>
                     <thead>
                         <tr>
@@ -113,7 +96,7 @@ function Home() {
                             <th>Time In</th>
                             <th>Reason</th>
                             <th>Confirmation</th>
-                            <th>Actions</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -129,14 +112,7 @@ function Home() {
                                 <td>{request.time_in}</td>
                                 <td>{request.reason}</td>
                                 <td>{request.confirmation}</td>
-                                <td>
-                                    <button onClick={() => handleSendQR(request._id)}>
-                                        Send QR
-                                    </button>
-                                    <button onClick={() => handleReject(request._id)}>
-                                        Reject
-                                    </button>
-                                </td>
+                                
                             </tr>
                         ))}
                     </tbody>

@@ -7,6 +7,7 @@ import Home from './Home'
 import Home2 from './Home2'
 import RConformation from './RConformation'
 import REdit from './REdit'
+import Allrequests from './Allrequests'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/home2' element={<Home2 />}></Route>
         <Route path='/RConformation' element={<RConformation />}></Route>
         <Route path='/REdit' element={<REdit />}></Route>
+        <Route path='/Allrequests' element={<Allrequests />}></Route>
       </Routes>
     </BrowserRouter>
   )
