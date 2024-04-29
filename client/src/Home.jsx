@@ -85,7 +85,7 @@ function Home() {
                 <Link to="/Allrequests" className="requestsbtn">
                     All Requests
                 </Link>
-                <Link to="/VehicleDetails" className="vehiclesbtn">
+                <Link to="/InandOut" className="vehiclesbtn">
                     Students In & Out Details
                 </Link>
                 <Link to="/Assign" className="assignbtn">

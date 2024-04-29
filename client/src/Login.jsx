@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import './CSS/Login.css'; // Import your CSS file
 
 function Login() {
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -16,9 +16,11 @@ function Login() {
                 console.log(result);
                 if (result.data === "Success") {
                     if (email === "admin") {
-                        navigate('/home', { state: { email, username: 'admin' } }); // Pass email and username
+                        navigate('/home', { state: { email, username: 'admin' } }); // Redirect to /home for admin
+                    } else if (email === "gate") {
+                        navigate('/home3', { state: { email, username: 'user' } }); // Redirect to /home2 for user1
                     } else {
-                        navigate('/home2', { state: { email, username: 'user' } }); // Pass email and username
+                        navigate('/home2', { state: { email, username: 'user' } }); // Redirect to /home3 for other users
                     }
                 } else {
                     console.log("Login failed"); // Add this line to log failed login attempts

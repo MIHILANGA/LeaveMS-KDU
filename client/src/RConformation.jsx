@@ -6,6 +6,7 @@ import './CSS/RConformation.css';
 
 function RConformation() {
     const [requests, setRequests] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
         axios.get('http://localhost:3001/request')
@@ -24,6 +25,11 @@ function RConformation() {
             });
     }, []);
 
+    // Filter requests based on search query
+    const filteredRequests = requests.filter(request =>
+        request.name && request.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
     return (
         <div className="home-container">
             <div className="header-rectangle">
@@ -32,6 +38,17 @@ function RConformation() {
             </div>
             <div className="panel4">
                 <h2>All Requests Details</h2>
+                {/* Search bar */}
+                <div className="search-container">
+    <input
+        type="text"
+        placeholder="Search by name..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        className="search-input"
+    />
+    <i className="fa fa-search search-icon"></i>
+</div>
                 <table className="requests-table">
                     <thead>
                         <tr>
@@ -42,12 +59,11 @@ function RConformation() {
                             <th>Time In</th>
                             <th>Reason</th>
                             <th>Confirmation or Reject</th>
-                            <th>sdfadf</th>
                             <th>QR Code</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {requests.map(request => (
+                        {filteredRequests.map(request => (
                             <tr key={request._id}>
                                 <td>{request.name}</td>
                                 <td>{request.date_out}</td>
@@ -56,7 +72,6 @@ function RConformation() {
                                 <td>{request.time_in}</td>
                                 <td>{request.reason}</td>
                                 <td>{request.confirmation}</td>
-                                <td></td>
                                 <td>
                                     {/* Generate QR code with specific data */}
                                     {request.confirmation === 'Confirmed' && (

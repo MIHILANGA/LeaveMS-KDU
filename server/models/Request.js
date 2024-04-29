@@ -8,6 +8,10 @@ const RequestSchema = new mongoose.Schema({
     time_in: String,
     date_out: Date,
     time_out: String,
+    Rdate_in: Date,
+    Rtime_in: String,
+    Rdate_out: Date,
+    Rtime_out: String,
     reason: String,
     confirmation: String,
     qr: Buffer, // Store QR code data as binary
