@@ -15,10 +15,10 @@ function RConformation() {
                 const updatedRequests = response.data.map(request => ({
                     ...request,
                     date_out: new Date(request.date_out).toLocaleDateString(),
-                    date_in: new Date(request.date_in).toLocaleDateString()
+                    
                 }));
-                // Reverse the array before setting state
-                setRequests(updatedRequests.reverse());
+                // No need to reverse the array
+                setRequests(updatedRequests);
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
@@ -40,15 +40,15 @@ function RConformation() {
                 <h2>All Requests Details</h2>
                 {/* Search bar */}
                 <div className="search-container">
-    <input
-        type="text"
-        placeholder="Search by name..."
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        className="search-input"
-    />
-    <i className="fa fa-search search-icon"></i>
-</div>
+                    <input
+                        type="text"
+                        placeholder="Search by name..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="search-input"
+                    />
+                    <i className="fa fa-search search-icon"></i>
+                </div>
                 <table className="requests-table">
                     <thead>
                         <tr>

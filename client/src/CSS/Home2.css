@@ -93,11 +93,11 @@ body {
     text-align: left;
     font-family: Arial, sans-serif;
     border-radius: 15px;
-    height: 500px;
+    height: 600px;
     width: 1150px;
     margin-right: 1px;
     margin-left: 300px;
-    margin-top: -320px;
+    margin-top: -360px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     background-color: #ffffffd8;
     overflow-y: auto; /* Enable vertical scrolling */
@@ -142,7 +142,7 @@ tr:nth-child(odd) {
 }
 
 .form1{
-    height: 400px;
+    height: 380px;
 }
 
 .panel1 {

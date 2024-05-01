@@ -144,3 +144,63 @@ tr:nth-child(odd) {
 .panel2 th {
     background-color: #e6f7ff; /* Light blue */
 }
+/* CSS for the search bar */
+.search-container1 {
+    margin-bottom: 10px;
+    margin-left: 5%;
+    border: 1px solid #d74646;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    position: absolute;
+    
+    right: 10px;
+    transform: translateY(-50%);
+    color: #888;
+}
+/* SearchBar.css */
+
+.search-container1 {
+    position: relative;
+    margin-bottom: 20px; /* Adjust spacing as needed */
+  }
+  
+  .search-input {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #d74646;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    margin-left: -70%;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #888;
+  }
+
+
+
+  /* Add this CSS to your InandOut.css file */
+
+.download-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-left: 65%;
+    margin-top: -1000px;
+}
+
+.download-button:hover {
+    background-color: #45a049;
+}

@@ -15,6 +15,8 @@ function Home() {
             .then(response => response.json())
             .then(data => {
                 const filteredRequests = data.filter(request => request.confirmation === "");
+                // Sort requests by date_out field
+                filteredRequests.sort((a, b) => new Date(a.date_out) - new Date(b.date_out));
                 setRequests(filteredRequests);
             })
             .catch(error => {
@@ -88,8 +90,8 @@ function Home() {
                 <Link to="/InandOut" className="vehiclesbtn">
                     Students In & Out Details
                 </Link>
-                <Link to="/Assign" className="assignbtn">
-                    Student Details
+                <Link to="/Gateletters" className="assignbtn">
+                    Gate Letters
                 </Link>
                 <Link to="/DriversDetails" className="driverbtn">
                     Cadets & Officers Details
@@ -112,7 +114,7 @@ function Home() {
                             <th>Date In</th>
                             <th>Time In</th>
                             <th>Reason</th>
-                            <th>Confirmation</th>
+                            
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -128,7 +130,7 @@ function Home() {
                                 <td>{convertToLocalDate(request.date_in)}</td>
                                 <td>{request.time_in}</td>
                                 <td>{request.reason}</td>
-                                <td>{request.confirmation}</td>
+                                
                                 <td>
                                     <button onClick={() => handleSendQR(request._id)}>
                                         Send QR

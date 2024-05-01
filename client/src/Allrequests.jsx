@@ -14,68 +14,40 @@ function Home() {
         fetch('http://localhost:3001/request')
             .then(response => response.json())
             .then(data => {
-                setRequests(data); // Set all requests without filtering
+                // Sort requests by date_out field in descending order
+                data.sort((a, b) => new Date(b.date_out) - new Date(a.date_out));
+                setRequests(data);
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
             });
     };
+    
 
-    const handleSendQR = requestId => {
-        // Update confirmation status in the database
-        fetch(`http://localhost:3001/updateConfirmation/${requestId}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ confirmation: 'Confirmed' }),
+    const handleDelete = requestId => {
+        fetch(`http://localhost:3001/deleteRequest/${requestId}`, {
+            method: 'DELETE',
         })
             .then(response => {
                 if (response.ok) {
-                    // If the update is successful, fetch the updated requests
                     fetchRequests();
-                    console.log('Confirmation updated successfully');
+                    console.log('Request deleted successfully');
                 } else {
-                    console.error('Failed to update confirmation status');
+                    console.error('Failed to delete request');
                 }
             })
             .catch(error => {
-                console.error('Error updating confirmation status:', error);
+                console.error('Error deleting request:', error);
             });
     };
 
-    const handleReject = requestId => {
-        // Update rejection status in the database
-        fetch(`http://localhost:3001/updateRejection/${requestId}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ confirmation: 'Rejected' }),
-        })
-            .then(response => {
-                if (response.ok) {
-                    // If the update is successful, fetch the updated requests
-                    fetchRequests();
-                    console.log('Rejection updated successfully');
-                } else {
-                    console.error('Failed to update rejection status');
-                }
-            })
-            .catch(error => {
-                console.error('Error updating rejection status:', error);
-            });
-    };
-
-    // Function to convert UTC date string to local date string
     const convertToLocalDate = utcDateString => {
         const date = new Date(utcDateString);
-        return date.toLocaleDateString(); // Get local date string
+        return date.toLocaleDateString();
     };
 
     return (
         <div className="home-container">
-            {/* Header and navigation buttons */}
             <div className="header-rectangle">
                 <img className="logo" alt="Kotelawala defence" src="kdu.png" />
                 <h1>Leave Management System</h1>
@@ -96,7 +68,7 @@ function Home() {
                             <th>Time In</th>
                             <th>Reason</th>
                             <th>Confirmation</th>
-                            
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -112,7 +84,9 @@ function Home() {
                                 <td>{request.time_in}</td>
                                 <td>{request.reason}</td>
                                 <td>{request.confirmation}</td>
-                                
+                                <td>
+                                    <button onClick={() => handleDelete(request._id)}>Delete</button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
