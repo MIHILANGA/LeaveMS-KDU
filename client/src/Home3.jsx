@@ -61,6 +61,8 @@ function Home() {
             {/* Header and navigation buttons */}
             <div className="header-rectangle">
                 <img className="logo" alt="Kotelawala defence" src="kdu.png" />
+                <h1 className="user4">GATE DASHBOARD</h1>
+                <img src="profile-user.png" className="userimg" alt="User" />
                 <h1>Leave Management System</h1>
             </div>
             <div className="nav-buttons3">
