@@ -1,0 +1,252 @@
+
+.home-container {
+    position: relative;
+    
+}
+
+.header-rectangle {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 110px;
+}
+
+.logo {
+    width: 500px;
+    position: absolute;
+    top: -57px; /* Adjust this value to control the vertical position */
+    left: 0px; /* Adjust this value to control the horizontal position */
+}
+
+form {
+   
+    background-color: rgba(149, 149, 149, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+h1{
+    text-align: end;
+    padding-top: 10px;
+    font-size: 30px;
+}
+body {
+    background-size:  cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Add more styling as needed for your form elements */
+.nav-buttons3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -50px;
+    margin-left: 700px;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .requestsbtn,
+  .vehiclesbtn,
+  .driverbtn,
+  .assignbtn,
+  .reservationbtn {
+    position: relative; /* Add this line to set the parent element to relative positioning */
+    text-decoration: none;
+    text-align: center;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    width: 250px;
+    height: 75px;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    margin: 50px 0;
+    margin-left: 200px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 540;
+  }
+
+  /* Hover styles */
+  .requestsbtn:hover,
+  .vehiclesbtn:hover,
+  .driverbtn:hover,
+  .assignbtn:hover,
+  .reservationbtn:hover {
+    background: #FF8811;
+    color: #fff;
+    transform: translateY(-5px);
+  }
+
+  
+.panel6 {
+    text-align: left;
+    font-family: Arial, sans-serif;
+    border-radius: 15px;
+    height: 500px;
+    width: 1430px;
+    margin-right: 1px;
+    margin-left: 30px;
+    margin-top: -40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    background-color: #ffffffd8;
+    overflow-y: auto; /* Enable vertical scrolling */
+    font-size: 15px;
+}
+
+
+h2{
+    padding-top: 10px;
+}
+
+/* Home.css */
+
+/* Style for table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style for table headers */
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style for table cells */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Style for odd rows */
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Style for table headers in the second panel */
+.panel2 th {
+    background-color: #e6f7ff; /* Light blue */
+}
+
+/* SearchBar.css */
+
+.search-container {
+    position: relative;
+    margin-bottom: 20px; /* Adjust spacing as needed */
+  }
+  
+  .search-input {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #d74646;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    margin-left: -70%;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #888;
+  }
+
+
+
+  /* CSS for the button */
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+/* CSS for the table cell */
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+  
+  .userimg{
+    border-radius: 100px;
+    border: none;
+    width: 43px;
+    height: -5px;
+    top: 20px; /* Adjust the top position as needed */
+    right: 692px; /* Adjust the right position as needed */
+    position: fixed;
+    z-index: 1;
+  
+  }
+  .user2{
+    font-size: medium;
+    position: fixed;
+    top: 30px; /* Adjust the top position as needed */
+    right: 180px; /* Adjust the right position as needed */
+    z-index: 1;
+    color: #ffffff;
+    margin-top: 31px;
+    margin-right: 452px;    
+    cursor: help;
+  }
+  .user3{
+    font-size: medium;
+    position: fixed;
+    top: 30px; /* Adjust the top position as needed */
+    right: 175px; /* Adjust the right position as needed */
+    z-index: 1;
+    color: #ffffff;
+    margin-top: 31px;
+    margin-right: 452px;    
+    cursor: help;
+  }
+  .user4{
+    font-size: medium;
+    position: fixed;
+    top: 30px; /* Adjust the top position as needed */
+    right: 188px; /* Adjust the right position as needed */
+    z-index: 1;
+    color: #ffffff;
+    margin-top: 31px;
+    margin-right: 452px;    
+    cursor: help;
+  }
+  .nav-buttons3{
+    right: 50%;
+  }

@@ -1,0 +1,186 @@
+
+.home-container {
+    position: relative;
+    
+}
+
+.header-rectangle {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 110px;
+}
+
+.logo {
+    width: 500px;
+    position: absolute;
+    top: -57px; /* Adjust this value to control the vertical position */
+    left: 0px; /* Adjust this value to control the horizontal position */
+}
+
+form {
+   
+    background-color: rgba(149, 149, 149, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+h1{
+    text-align: end;
+    padding-top: 10px;
+    font-size: 30px;
+}
+body {
+    background-size:  cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Add more styling as needed for your form elements */
+.nav-buttons3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -50px;
+    margin-left: 420px;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .requestsbtn,
+  .vehiclesbtn,
+  .driverbtn,
+  .assignbtn,
+  .reservationbtn {
+    position: relative; /* Add this line to set the parent element to relative positioning */
+    text-decoration: none;
+    text-align: center;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    width: 250px;
+    height: 75px;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    margin: 50px 0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 540;
+  }
+
+  /* Hover styles */
+  .requestsbtn:hover,
+  .vehiclesbtn:hover,
+  .driverbtn:hover,
+  .assignbtn:hover,
+  .reservationbtn:hover {
+    background: #FF8811;
+    color: #fff;
+    transform: translateY(-5px);
+  }
+
+  
+.panel10 {
+    text-align: left;
+    font-family: Arial, sans-serif;
+    border-radius: 15px;
+    height: 550px;
+    width: 1430px;
+    margin-right: 1px;
+    margin-left: 30px;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    background-color: #ffffffd8;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+h2{
+    padding-top: 10px;
+}
+
+/* Home.css */
+
+/* Style for table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style for table headers */
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style for table cells */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Style for odd rows */
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Style for table headers in the second panel */
+.panel10 th {
+    background-color: #e6f7ff; /* Light blue */
+}
+
+/* SearchBar.css */
+
+.search-container {
+    position: relative;
+    margin-bottom: 20px; /* Adjust spacing as needed */
+  }
+  
+  .search-input {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #d74646;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    margin-left: -70%;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #888;
+  }
+
+
+  .letter-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.letter-images img {
+    margin: 10px;
+    height: 200px; /* Adjust the height as needed */
+    width: 400px; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+}
