@@ -14,14 +14,18 @@ function Home() {
         fetch('http://localhost:3001/request')
             .then(response => response.json())
             .then(data => {
-                // Sort requests by 'Requested Date Out' in descending order
-                data.sort((a, b) => new Date(b.date_out) - new Date(a.date_out));
-                setRequests(data); // Set all requests without filtering
+                // Filter requests with confirmation status 'Confirmed'
+                const confirmedRequests = data.filter(request => request.confirmation === 'Confirmed');
+                // Sort confirmed requests by 'Requested Date Out' in descending order
+                confirmedRequests.sort((a, b) => new Date(b.date_out) - new Date(a.date_out));
+                setRequests(confirmedRequests); // Set only confirmed requests without filtering
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
             });
     };
+    
+    
 
     // Function to convert UTC date string to local date string
     const convertToLocalDate = utcDateString => {
